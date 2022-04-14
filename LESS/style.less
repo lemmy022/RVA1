@@ -1,0 +1,467 @@
+﻿@colorMainBeige: #f0e1d1; 
+@colorMainOrange: #dc6b2e;
+@colorMainTeal: #0ca4a5;
+
+
+@colorTeal1: lighten(@colorMainTeal, 55%);
+@colorTeal2: lighten(@colorMainTeal, 60%);
+@colorTeal3: darken(@colorMainTeal, 20%);
+@colorSecondaryTeal: #055761;
+
+
+@widthFull: 100%;
+@width90: 90%; 
+@width50: 50%;
+
+
+@import "../less/navigacija.less";
+@import (reference) "../less/mixins.less";
+
+
+@font-face {
+    
+    font-family: Roboto;
+    src: url('../Fonts/Roboto-Regular.ttf');
+}
+@font-face {
+    font-family: RobotoBlack;
+    src: url('../Fonts/Roboto-Black.ttf');
+}
+
+body {
+    .naslov(16px, 'Roboto');
+    background-color: white;
+    color: #001314;
+    margin: 0 auto;
+    max-width: 1200px;
+    width: @widthFull;
+}
+
+#omot {
+    height: auto;
+    margin: auto;
+}
+
+article {
+    padding-top: 80px;
+    width: @widthFull;
+}
+
+.headerandfooter {
+    background-color: @colorSecondaryTeal;
+    width: @widthFull;
+}
+
+header {
+    &:extend(.headerandfooter);
+    padding-bottom: 50px;
+    padding-top: 30px;
+    z-index: 2;
+}
+
+footer {
+    &:extend(.headerandfooter);
+    color: white;
+    margin: 0px auto;
+    padding-bottom: 0.3em;
+    padding-top: 0.3em;
+    text-align: center;
+}
+
+img {
+    height: auto;
+    margin: 0 auto;
+    width: @widthFull;
+}
+
+.mamelogo {
+    display: block;
+    width: 50%;
+}
+
+svg {
+    fill: @colorTeal1;
+    width: 170px;
+    height: auto;
+    margin-bottom: -150px;
+    margin-left: -120px;
+    z-index: 1;
+}
+
+
+p {
+    font-family: 'Roboto';
+}
+h1 {
+    .naslov();
+    text-align: center;
+    color: white;
+}
+
+
+h2 {
+    .naslov(40px);
+}
+
+h3 {
+    .naslov(30px);
+}
+
+.centriran-naslov {
+    margin-bottom: 50px;
+    margin-top: 0;
+    padding-top: 30px;
+    text-align: center;
+}
+
+
+.ctabutton {
+    .ctadugme;
+}
+
+input[type=submit] {
+   .ctadugme;
+}
+
+input[type=text] {
+    background-color: @colorTeal2;
+    border: 1px solid @colorTeal1;
+    color: @colorTeal3;
+    font-family: RobotoBlack;
+    font-size: 16px;
+    margin-bottom: 15px;
+    padding: 10px;
+    width: @width90;
+}
+
+input[type=email] {
+    background-color: @colorTeal2;
+    border: 1px solid @colorTeal1;
+    color: @colorTeal3;
+    font-family: RobotoBlack;
+    font-size: 16px;
+    margin-bottom: 15px;
+    padding: 10px;
+    width: @width90;
+}
+
+input[list] {
+    background-color: @colorTeal2;
+    border: 1px solid @colorTeal1;
+    color: @colorTeal3;
+    font-family: RobotoBlack;
+    font-size: 16px;
+    margin-bottom: 15px;
+    padding: 10px;
+    width: @width90;
+}
+
+textarea {
+    background-color: @colorTeal2;
+    border: 1px solid @colorTeal1;
+    color: @colorTeal3;
+    font-family: RobotoBlack;
+    font-size: 16px;
+    margin-bottom: 15px;
+    padding: 10px;
+    width: @width90;
+}
+
+fieldset {
+    border: 0px;
+    font-family: Roboto;
+    font-size: 16px;
+}
+
+
+.plava-sekcija {
+    background-color: @colorTeal3;
+    color: white;
+    margin-top: 0px;
+    width: @widthFull;
+}
+.tamna-pozadina {
+    background-color: @colorMainBeige;
+    margin-top: 70px;
+    padding: 30px;
+}
+
+.bela-sekcija {
+    margin: 0 auto;
+    padding-top: 15px;
+    width: 70%;
+}
+
+
+.emulator-grid {
+    column-gap: 15px;
+    display: flex;
+    grid-template-columns: auto auto auto;
+    margin-bottom: 70px;
+}
+
+.grid-column {
+    border: 2px solid @colorTeal3;
+    box-sizing: border-box;
+    flex-basis: 33.33333333%;
+    height: auto;
+    max-width: 33.33333333%;
+    padding: 20px;
+
+    h3 {
+        background-color: @colorTeal1;
+        border-bottom: 5px solid @colorMainTeal;
+        display: flex;
+        margin-top: -50px;
+        padding: 20px;
+    }
+}
+
+.column-grid21 {
+    column-gap: 15px;
+    display: grid;
+    grid-template-columns: auto auto;
+     padding:0px;
+    width: @widthFull;
+}
+
+.grid-column22 {
+    height: auto;
+    h3 {
+        border-left: 5px solid @colorMainTeal;
+        margin-bottom: 0px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+.grid-column21 {
+    height: auto;
+}
+
+
+.two-emulator-grid {
+    column-gap: 10px;
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-bottom: 70px;
+    row-gap: 10px;
+    width: @widthFull;
+}
+
+.two-grid-column {
+    width: @widthFull;
+
+    img {
+        height: 200px;
+    }
+}
+
+
+
+
+
+@media  (max-width: 300px) {
+    body, #omot, article {
+        width: @widthFull;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+
+    .emulator-grid, .grid-column, .column-grid21, grid-column22, grid-column21 {
+        display: block;
+        padding: 0;
+        margin: 0 auto;
+        width: @width90;
+        flex-basis: @widthFull;
+        max-width: @widthFull;
+        border: 0px;
+    }
+
+    article {
+        padding-top: 0;
+    }
+
+    nav {
+        grid-template-columns: auto;
+        display: grid;
+        padding: 0px;
+        margin: 0 auto;
+        flex-basis: @widthFull;
+        max-width: @widthFull;
+    }
+
+    nav a {
+        padding: 0;
+        margin: 0;
+        width: @widthFull;
+        text-align: center;
+        font-size: 16px;
+    }
+
+ 
+
+    h1, h2, h3 {
+        font-size: 20px;
+        padding: 0;
+    }
+    .grid-column h3 {
+        margin-top: 50px;
+    }
+
+    header {
+        padding-top: 15px;
+        margin-top: -20px;
+        padding-bottom: 5px;
+    }
+
+    .ctabutton {
+        display: block;
+        max-width: @width90;
+        width: @width90;
+        text-align: center;
+        font-size: 16px;
+        
+    }
+    p{
+        margin:5px;
+    }
+
+}
+
+
+@media only screen and (min-width: 300px) and (max-width: 640px) {
+    body, #omot, article, nav {
+        width: @widthFull;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+
+    .emulator-grid, .grid-column, .column-grid21, grid-column22, grid-column21 {
+        display: block;
+        padding: 0;
+        margin: 0 auto;
+        width: @widthFull;
+        flex-basis: @widthFull;
+        max-width: @widthFull;
+        border: 0px;
+    }
+
+    article {
+        padding-top: 0;
+    }
+
+    nav {
+        grid-template-columns: auto;
+        display: grid;
+        padding: 0px;
+        margin: 0 auto;
+        flex-basis: @widthFull;
+        max-width: @widthFull;
+    }
+
+    nav a {
+        
+        padding: 0;
+        margin: 0;
+        width: @widthFull;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    h1, h2, h3 {
+        font-size: 25px;
+        padding: 0;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .grid-column h3 {
+        margin-top: 50px;
+    }
+
+    img {
+        max-width: @width90;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    header {
+        padding-top: 15px;
+        margin-top: -20px;
+        padding-bottom: 5px;
+    }
+
+    .ctabutton {
+        display: block;
+        max-width: @width90;
+        width: @width90;
+        text-align: center;
+        font-size: 16px;
+        margin-bottom: 50px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    p {
+        margin-left: 10px;
+        margin-right: 10px;
+        padding: 0;
+    }
+}
+
+
+
+    @media only screen and (min-width: 640px) and (max-width: 961px) {
+
+        article {
+            padding-top: 0;
+
+        }
+
+
+
+        nav {
+            grid-template-columns: auto auto auto auto auto;
+            display: grid;
+            width: @width90;
+            margin-bottom: 20px;
+            padding: 0;
+        }
+
+        a {
+            width: @widthFull !important;
+        }
+
+
+        .column-grid21, grid-column22, grid-column21 {
+            padding: 0px;
+        }
+
+        .emulator-grid, .grid-column {
+            width: @width90;
+            margin: 0 auto;
+        }
+
+        h1, h2, h3 {
+            font-size: 25px;
+            padding: 0;
+        }
+
+        .grid-column h3 {
+            font-size: 20px;
+            padding: 5px;
+        }
+
+        .ctabutton {
+            display: block;
+            max-width: @width90;
+            width: @width90;
+            margin: 0 auto;
+            font-size: 16px;
+        }
+        p {
+            margin: 5px;
+        }
+    }
